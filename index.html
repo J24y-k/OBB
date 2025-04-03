@@ -12,48 +12,158 @@
         <!--<img src="pastethelinkhere" alt="logo" -->
         <nav>
             <ul>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#Contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ourservices.html">Services</a></li>
             </ul>
         </nav>
         <a href="#contact" class="cta-button">Get a Diagnostic</a>
     </header>
 
+    <section id="welcome" class="welcome">
+        <div class="welcome-container">
+            <h2>Welcome to OBB Diagnostic</h2>
+            <p>
+                At <strong>OBB Diagnostic & Key Coding</strong>, we specialize in providing 
+                <span class="highlight">Advanced vehicle diagnostics</span> and 
+                <span class="highlight">Key programming solutions</span>. Our expert team ensures 
+                precision, efficiency, and reliability to keep your vehicle running smoothly. 
+                Whether it is a simple check-up or complex troubleshooting, 
+                <strong>we have got you covered!</strong>
+            </p>
+            <a href="ourservices.html" class="btn-primary">Explore Our Services</a>
+        </div>
+    </section>
+    
+
     <section id="about" class="about">
         <h2>About Us</h2>
         <p>We are dedicated to delivering high quality automotive diagnostics and key coding services. OBB embodies precision, innovation, and reliability, fostering trust with vehicle owners, businesses, and industry professionals.
             We aim to deliver high-quality diagnostic and key coding services with speed and accuracy, building long-term relationships with customers and businesses through exceptional service and reliability.</p>
-        
+        <br>
+        <br>
         <h3>Our Core Values</h3>
         <ul>
-            <li> <b>Precision:</b> Accurate diagnostics and key programming with cutting-edge technology.</li>
-            <li><b>Reliability:</b> Consistent, high-quality service.</li>
-            <li><b>Innovation:</b> Staying ahead with the latest advancements.</li>
-            <li><b>Efficiency:</b>  Fast and effective solutions.</li>
-            <li><b>Customer Centric:</b>  Exceptional service and satisfaction.</li>
-            <li><b>Integrity:</b> Honesty, transparency, and professionalism.</li>
-            <li><b>Continuous Improvement:</b> Always learning, evolving, and adapting.</li>
+            <li><b>Efficiency:</b>  Fast and effective solutions.</li><br>
+            <li><b>Reliability:</b> Consistent, high-quality service.</li><br>
+            <li><b>Integrity:</b> Honesty, transparency, and professionalism.</li><br>
+            <li><b>Customer Centric:</b>  Exceptional service and satisfaction.</li><br>
+            <li><b>Innovation:</b> Staying ahead with the latest advancements.</li><br>
+            <li><b>Continuous Improvement:</b> Always learning, evolving, and adapting.</li><br>
+            <li> <b>Precision:</b> Accurate diagnostics and key programming with cutting-edge technology.</li><br>
         </ul>
     </section>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <p>Every car tells a story, and every driver deserves peace of mind. At OBB Diagnostic and Key Coding, we're driven by a passion for precision and innovation. Our mission is to provide accurate, efficient, and reliable automotive diagnostics and key coding solutions, ensuring seamless vehicle operation and security</p>
-        <div class="service-list">
-            <div class="service-card">Key Coding and Programming</div>
-            <div class="service-card">Mechanic</div>
-        </div>
-    </section>
-
+    <!--form section jay-->
     <section id="contact" class="contact">
         <h2>Reach out to us</h2>
-        <form>
-            <input type="name" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="number" placeholder="Phone Number">
-            <textarea placeholder="Your Message"></textarea>
+        <form id="contactForm" action="https://formsubmit.co/Clovisbarabula2000@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+        
+            <!-- Hidden fields for better email display -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_replyto" value="{email}">
+            <input type="hidden" name="_subject" value="New Contact Form Submission from {name}"> 
+            <input type="hidden" name="_template" value="table">
+        
             <button type="submit">Send a Message</button>
         </form>
+        
     </section>
+    
+    <!-- Modal Popup (Hidden by Default) -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for reaching out, we'll get back to you as soon as possible.</p>
+        </div>
+    </div>
+    
+    <!-- Styles for Modal -->
+    <style>
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+    
+    <!-- JavaScript for Modal -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
+            const modal = document.getElementById("thankYouModal");
+    
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevents default form submission
+    
+                if (form.checkValidity()) {
+                    fetch(form.action, {
+                        method: "POST",
+                        body: new FormData(form)
+                    }).then(response => {
+                        if (response.ok) {
+                            modal.style.display = "flex"; // Show modal after successful submission
+    
+                            setTimeout(() => {
+                                modal.style.display = "none"; // Hide after 7 seconds
+                            }, 7000);
+    
+                            form.reset(); // Clear form fields
+                        } else {
+                            alert("Something went wrong, please try again.");
+                        }
+                    }).catch(() => {
+                        alert("Error sending message. Please try again later.");
+                    });
+                } else {
+                    form.reportValidity();
+                }
+            });
+    
+            // Ensure modal is hidden on page load
+            modal.style.display = "none";
+        });
+    </script>    
+<!-- it ends here-->
+
+    <footer>
+        <div class="footer-container">
+            <h2>Follow Us</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1DMbNPLWPr/" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.tiktok.com/@obb.car.repairs?_t=ZM-8vD5AFDzzbK&_r=1" target="_blank">
+                    <img src="images/tiktok.png" alt="TikTok">
+                </a>
+                <a href="https://wa.me/27652875649" target="_blank">
+                    <img src="images/whatsapp.jpeg" alt="WhatsApp"> 
+                </a>
+            </div>
+            <p><strong>Address:</strong> 1 Flamink Road, Kempton Park</p>
+            <p>&copy; 2024 OBB Diagnostic & Key Coding | All Rights Reserved</p>
+        </div>
+    </footer>    
 </body>

@@ -53,6 +53,61 @@ nav ul li a {
     text-align: center;
 }
 
+.about {
+    background-color: #0A1128; /* Matches website background */
+    padding: 60px 20px;
+    text-align: center;
+    color: #F4E8C1;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #E8C064;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.about h3 {
+    font-size: 2rem;
+    color: #E8C064;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about ul li {
+    font-size: 1.2rem;
+    padding: 12px;
+    background-color: rgba(232, 192, 100, 0.1);
+    border-left: 5px solid #E8C064;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.about ul li b {
+    color: #E63946; /* Highlighted in red for emphasis */
+}
+
+@media (max-width: 768px) {
+    .about p,
+    .about ul {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+}
+
 .service-list {
     display: flex;
     justify-content: center;
@@ -93,4 +148,181 @@ nav ul li a {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.welcome {
+    background-image: url('images/welcome-bg.jpg'); /* Add a background image */
+    background-size: cover;
+    background-position: center;
+    color: #F4E8C1;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.welcome-container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(10, 17, 40, 0.8); /* Subtle overlay for readability */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.welcome h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #E8C064;
+}
+
+.welcome p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #E63946;
+    font-weight: bold;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #E63946;
+    color: #F4E8C1;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #c92a3b;
+}
+
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0A1128; /* Matches website theme */
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    color: #E8C064; /* Gold color for headings */
+    margin-bottom: 15px;
+}
+
+.services p {
+    font-size: 1.2rem;
+    color: #F4E8C1;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.service-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background-color: #0A1128;
+    border: 2px solid #E8C064;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    color: #F4E8C1;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    border-color: #E63946; /* Red border highlight on hover */
+}
+
+.service-item h3 {
+    font-size: 1.8rem;
+    color: #E8C064;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #F4E8C1;
+    margin-bottom: 10px;
+}
+
+.service-item ul {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 1rem;
+    color: #E8C064;
+}
+
+.service-item ul li {
+    list-style-type: square;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .service-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 90%;
+    }
+}
+
+footer {
+    background-color: #0A1128;
+    color: #F4E8C1;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer-container h2 {
+    font-size: 2rem;
+    color: #E8C064;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-links img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 5px 0;
 }
