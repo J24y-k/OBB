@@ -8,28 +8,25 @@
 </head>
 <body>
     <header>
-        <div class="logo">OBB Diagnostic</div>
-        <!--<img src="pastethelinkhere" alt="logo" -->
+        <div class="logo">
+            <img src="images/obb logo.jpg" alt="logo" class="logo-img">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="ourservices.html">Services</a></li>
             </ul>
         </nav>
-        <a href="#contact" class="cta-button">Get a Diagnostic</a>
+        <a href="#contact" class="cta-button">Get In Touch With Us</a>
     </header>
 
     <section id="welcome" class="welcome">
         <div class="welcome-container">
             <h2>Welcome to OBB Diagnostic</h2>
             <p>
-                At <strong>OBB Diagnostic & Key Coding</strong>, we specialize in providing 
-                <span class="highlight">Advanced vehicle diagnostics</span> and 
-                <span class="highlight">Key programming solutions</span>. Our expert team ensures 
-                precision, efficiency, and reliability to keep your vehicle running smoothly. 
-                Whether it is a simple check-up or complex troubleshooting, 
-                <strong>we have got you covered!</strong>
-            </p>
+                Your trusted partner for all your car repair needs. We're dedicated to delivering top-quality service, honesty, and transparency to get you back on the road quickly and safely.
+
+Our state of art facility and experienced team of mechanics are equipped to handle all types of repairs, from routine maintenance to complex diagnostics. We pride ourselves on providing accurate estimates, timely completion, and exceptional customer service.</p>
             <a href="ourservices.html" class="btn-primary">Explore Our Services</a>
         </div>
     </section>
@@ -37,8 +34,9 @@
 
     <section id="about" class="about">
         <h2>About Us</h2>
-        <p>We are dedicated to delivering high quality automotive diagnostics and key coding services. OBB embodies precision, innovation, and reliability, fostering trust with vehicle owners, businesses, and industry professionals.
-            We aim to deliver high-quality diagnostic and key coding services with speed and accuracy, building long-term relationships with customers and businesses through exceptional service and reliability.</p>
+        <p>At OBB Car Repairs, we're passionate about providing top-notch car repair services that meet the highest standards of quality, reliability, and customer satisfaction.
+            We strive to build long lasting relationships with our customers, founded on trust, honesty, and transparency.
+        </p>
         <br>
         <br>
         <h3>Our Core Values</h3>
@@ -165,5 +163,27 @@
             <p><strong>Address:</strong> 1 Flamink Road, Kempton Park</p>
             <p>&copy; 2024 OBB Diagnostic & Key Coding | All Rights Reserved</p>
         </div>
-    </footer>    
+        <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+        <script>
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        
+            // Show the button when user scrolls down
+            window.onscroll = function () {
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    scrollToTopBtn.style.display = "block";
+                } else {
+                    scrollToTopBtn.style.display = "none";
+                }
+            };
+        
+            // Smooth scroll to top
+            scrollToTopBtn.addEventListener("click", function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+        
+    </footer>   
 </body>

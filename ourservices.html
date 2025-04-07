@@ -8,24 +8,23 @@
 </head>
 <body>
     <header>
-        <div class="logo">OBB Diagnostic</div>
-        <!--<img src="pastethelinkhere" alt="logo" -->
+        <div class="logo">
+            <img src="images/obb logo.jpg" alt="logo" class="logo-img">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="ourservices.html">Services</a></li>
             </ul>
         </nav>
-        <a href="index.html#contact" class="cta-button">Get a Diagnostic</a>
+        <a href="index.html#contact" class="cta-button">Get In Touch With Us</a>
     </header>
 
 <section class="services">
     <h2>Our Services</h2>
     <p>
         Every car tells a story, and every driver deserves peace of mind. At 
-        <strong>OBB Diagnostic & Key Coding</strong>, we're driven by a passion for precision and 
-        innovation. Our mission is to provide accurate, efficient, and reliable automotive diagnostics 
-        and key coding solutions, ensuring your vehicle operates seamlessly and securely.
+        <strong>OBB Diagnostic & Key Coding</strong>, we provide expert car repair and maintenance services to keep your vehicle running smoothly and safely. We offer general repairs and maintenance, diagnostic services, and mechanical repairs. We're committed to delivering quality workmanship, honest assessments, and transparent pricing. Trust us to get your car back-on-the-road.
     </p>
 
     <div class="service-gallery">
@@ -63,6 +62,18 @@
             </ul>
         </div>
     </div>
+    
+    <section class="media-showcase"> 
+        <div class="media-wrapper">
+            <img src="images/mech.jpg" alt="Diagnostic Image 1" class="media-img">
+            <img src="images/img1.jpg" alt="Diagnostic Image 2" class="media-img">
+            
+            <video autoplay muted loop playsinline class="media-video">
+                <source src="images/keycoding.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+    
 </section>
 
 <footer>
@@ -82,5 +93,27 @@
         <p><strong>Address:</strong> 1 Flamink Road, Kempton Park</p>
         <p>&copy; 2024 OBB Diagnostic & Key Coding | All Rights Reserved</p>
     </div>
+    <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+    <script>
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    
+        // Show the button when user scrolls down
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+    
+        // Smooth scroll to top
+        scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    
 </footer>    
 </body>
