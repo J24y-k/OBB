@@ -384,20 +384,13 @@ footer p {
     margin: 5px 0;
 }
 
+
 @media (max-width: 768px) {
     header {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        height: auto;
         padding: 10px;
-    }
-
-    .logo {
-        order: 2;
-        width: 100%;
-        justify-content: flex-start;
-        margin-top: 10px;
+        width: auto;
     }
 
     nav ul {
@@ -406,4 +399,6 @@ footer p {
         padding: 0;
         gap: 15px;
     }
+
 }
+
