@@ -384,42 +384,26 @@ footer p {
     margin: 5px 0;
 }
 
-
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
         padding: 10px;
-        gap: 10px;
     }
 
     .logo {
         order: 2;
-        display: flex;
-        align-items: center;
+        width: 100%;
         justify-content: flex-start;
-        width: 100%;
-    }
-
-    nav {
-        order: 1;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
+        margin-top: 10px;
     }
 
     nav ul {
-        display: flex;
-        justify-content: flex-end;
-        gap: 15px;
-        width: 100%;
+        order: 1;
+        margin-left: auto;
         padding: 0;
-        margin: 0;
-    }
-
-    .cta-button {
-        order: 3;
-        width: 100%;
-        text-align: right;
+        gap: 15px;
     }
 }
