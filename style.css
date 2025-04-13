@@ -387,24 +387,39 @@ footer p {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: stretch;
         padding: 10px;
+        gap: 10px;
     }
 
     .logo {
-        order: 4;
-        width: 100%;
+        order: 2;
+        display: flex;
+        align-items: center;
         justify-content: flex-start;
-        margin-top: 10px;
+        width: 100%;
+    }
+
+    nav {
+        order: 1;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
 
     nav ul {
-        order: 2;
-        margin-left: auto;
-        padding: 0;
+        display: flex;
+        justify-content: flex-end;
         gap: 15px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cta-button {
+        order: 3;
+        width: 100%;
+        text-align: right;
     }
 }
