@@ -395,14 +395,14 @@ footer p {
     }
 
     .logo {
-        order: 2;
+        order: 4;
         width: 100%;
         justify-content: flex-start;
         margin-top: 10px;
     }
 
     nav ul {
-        order: 1;
+        order: 2;
         margin-left: auto;
         padding: 0;
         gap: 15px;
