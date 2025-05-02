@@ -94,26 +94,6 @@
         <p>&copy; 2024 OBB Diagnostic & Key Coding | All Rights Reserved</p>
     </div>
     <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
-    <script>
-        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    
-        // Show the button when user scrolls down
-        window.onscroll = function () {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        };
-    
-        // Smooth scroll to top
-        scrollToTopBtn.addEventListener("click", function () {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-    
-</footer>    
+</footer>  
+<script src="script.js"></script> 
 </body>

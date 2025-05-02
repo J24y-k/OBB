@@ -51,7 +51,6 @@ Our state of art facility and experienced team of mechanics are equipped to hand
         </ul>
     </section>
 
-    <!--form section jay-->
     <section id="contact" class="contact">
         <h2>Reach out to us</h2>
         <form id="contactForm" action="https://formsubmit.co/Clovisbarabula2000@gmail.com" method="POST">
@@ -71,80 +70,11 @@ Our state of art facility and experienced team of mechanics are equipped to hand
         
     </section>
     
-    <!-- Modal Popup (Hidden by Default) -->
     <div id="thankYouModal" class="modal">
         <div class="modal-content">
             <p>Thank you for reaching out, we'll get back to you as soon as possible.</p>
         </div>
     </div>
-    
-    <!-- Styles for Modal -->
-    <style>
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .modal-content {
-            background: white;
-            color: black;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-    </style>
-    
-    <!-- JavaScript for Modal -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("contactForm");
-            const modal = document.getElementById("thankYouModal");
-    
-            form.addEventListener("submit", function (event) {
-                event.preventDefault(); // Prevents default form submission
-    
-                if (form.checkValidity()) {
-                    fetch(form.action, {
-                        method: "POST",
-                        body: new FormData(form)
-                    }).then(response => {
-                        if (response.ok) {
-                            modal.style.display = "flex"; // Show modal after successful submission
-    
-                            setTimeout(() => {
-                                modal.style.display = "none"; // Hide after 7 seconds
-                            }, 7000);
-    
-                            form.reset(); // Clear form fields
-                        } else {
-                            alert("Something went wrong, please try again.");
-                        }
-                    }).catch(() => {
-                        alert("Error sending message. Please try again later.");
-                    });
-                } else {
-                    form.reportValidity();
-                }
-            });
-    
-            // Ensure modal is hidden on page load
-            modal.style.display = "none";
-        });
-    </script>    
-<!-- it ends here-->
 
     <footer>
         <div class="footer-container">
@@ -164,26 +94,7 @@ Our state of art facility and experienced team of mechanics are equipped to hand
             <p>&copy; 2024 OBB Diagnostic & Key Coding | All Rights Reserved</p>
         </div>
         <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
-        <script>
-            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-        
-            // Show the button when user scrolls down
-            window.onscroll = function () {
-                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                    scrollToTopBtn.style.display = "block";
-                } else {
-                    scrollToTopBtn.style.display = "none";
-                }
-            };
-        
-            // Smooth scroll to top
-            scrollToTopBtn.addEventListener("click", function () {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        </script>
-        
-    </footer>   
+    </footer>  
+    <script src="script.js"></script> 
 </body>
+</html>
