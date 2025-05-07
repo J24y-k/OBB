@@ -65,7 +65,7 @@ nav ul li a {
 }
 
 .about {
-    background-color: #0A1128; /* Matches website background */
+    background-color: #0A1128; 
     padding: 60px 20px;
     text-align: center;
     color: #F4E8C1;
@@ -108,7 +108,7 @@ nav ul li a {
 }
 
 .about ul li b {
-    color: #E63946; /* Highlighted in red for emphasis */
+    color: #E63946; 
 }
 
 @media (max-width: 768px) {
@@ -170,7 +170,7 @@ nav ul li a {
 }
 
 .welcome {
-    background-image: url('images/welcome-bg.jpg'); /* Add a background image */
+    background-image: url('images/welcome-bg.jpg'); /* Adds a background image */
     background-size: cover;
     background-position: center;
     color: #F4E8C1;
@@ -181,7 +181,7 @@ nav ul li a {
 .welcome-container {
     max-width: 800px;
     margin: auto;
-    background: rgba(10, 17, 40, 0.8); /* Subtle overlay for readability */
+    background: rgba(10, 17, 40, 0.8); /* Subtle overlay for readabilityyy */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -223,12 +223,12 @@ nav ul li a {
 .services {
     text-align: center;
     padding: 50px 20px;
-    background-color: #0A1128; /* Matches website theme */
+    background-color: #0A1128; /* Matches the web theme */
 }
 
 .services h2 {
     font-size: 2.5rem;
-    color: #E8C064; /* Gold color for headings */
+    color: #E8C064; 
     margin-bottom: 15px;
 }
 
@@ -262,7 +262,7 @@ nav ul li a {
 
 .service-item:hover {
     transform: translateY(-5px);
-    border-color: #E63946; /* Red border highlight on hover */
+    border-color: #E63946; /* Red border highlight on the hover */
 }
 
 .service-item h3 {
@@ -410,7 +410,7 @@ footer p {
 
 }
 
-/* Alternate theme */
+/* Alternate theme extra deco */
 .alt-background {
     background-color: #1f2a44;
     transition: background-color 0.6s ease;
@@ -467,7 +467,7 @@ body::after {
     pointer-events: none;
 }
 
-/* About section cinematic background transition */
+/* About section cinematic background transitions */
 .about::before {
     content: '';
     position: absolute;
@@ -505,14 +505,12 @@ body.alt-theme::before {
     left: 0;
 }
 
-/* Optional smoother base transition */
 body {
     transition: background-color 0.5s ease;
     position: relative;
     z-index: 0;
 }
 
-/* Ensure Reach Out section uses the correct color */
 #contact {
     background-color: #0A1128;
     color: #ffffff;
